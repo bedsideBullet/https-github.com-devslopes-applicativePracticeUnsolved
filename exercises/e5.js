@@ -5,12 +5,10 @@ import { data } from "../data/data";
 // Return example: ['name1', 'name2', ... , 'nameN']
 
 export function getPlanetsWithMassValue(data, number) {
-  console.log(data.planets);
-
   return data.planets
     .filter(
       (planet) =>
-        planet.hasOwnProperty("mass") && parseFloat(planet.mass) >= number
+        planet.hasOwnProperty("mass") && planet.mass.massValue >= number
     )
     .map((planet) => planet.name);
 }
