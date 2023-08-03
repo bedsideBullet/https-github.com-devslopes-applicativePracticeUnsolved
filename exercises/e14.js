@@ -5,10 +5,9 @@ import { data } from "../data/data";
 // Return example: 234234.234
 
 export function getOrbitalPeriodsSum(data) {
-  const orbitalPeriodSum = data.asteroids.reduce((total, asteroid) => {
+  return data.asteroids.reduce((total, asteroid) => {
     return total + asteroid.orbitalPeriod;
   }, 0);
-  return orbitalPeriodSum;
 }
 
 // === TEST YOURSELF ===

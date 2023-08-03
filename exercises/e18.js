@@ -17,10 +17,7 @@ export function getGreatestDiscoveryYear(data) {
     yearCounts[year] = (yearCounts[year] || 0) + 1;
   }
 
-  const greatestYear = maxBy(
-    Object.entries(yearCounts),
-    ([year, count]) => count
-  );
+  const greatestYear = maxBy(Object.entries(yearCounts), ([, count]) => count);
 
   return parseInt(greatestYear[0]);
 }

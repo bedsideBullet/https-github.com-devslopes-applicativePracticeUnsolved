@@ -6,11 +6,7 @@ import { data } from "../data/data";
 
 export function getAsteroidsDiscoveredAfterYear(data, year) {
   return data.asteroids
-    .filter(
-      (asteroid) =>
-        asteroid.hasOwnProperty("discoveryYear") &&
-        asteroid.discoveryYear > year
-    )
+    .filter((asteroid) => asteroid.discoveryYear > year)
     .map((asteroid) => asteroid.name);
 }
 

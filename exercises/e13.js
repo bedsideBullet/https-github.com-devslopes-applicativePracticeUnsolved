@@ -9,8 +9,7 @@ export function getAveragePlanetsTemperature(data) {
     return total + planet.avgTemp;
   }, 0);
 
-  const averageTemp = totalTemp / data.planets.length;
-  return averageTemp;
+  return totalTemp / data.planets.length;
 }
 
 // === TEST YOURSELF ===
